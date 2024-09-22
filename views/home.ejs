@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+
+<div class="head">
+  <div class="create">
+    <a href="/create"><button class="my-5">Create Post</button></a>
+  </div>
+  <div class="post">
+    <% if (locals.posts){ %> <% posts.forEach((post) => { %>
+
+    <h4 class="posts">
+      <a href="/view/<%= posts.indexOf(post) %>"><%=post.head %></a>
+    </h4>
+    <p class="info"><%=post.info %></p>
+    <%} ) } %>
+  </div>
+</div>

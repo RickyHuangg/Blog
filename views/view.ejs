@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <div class="head content">
+      <h1 class="fw-bolder"><%= head %></h1>
+
+      <h4 class="my-5 fw-normal"><%= content %></h4>
+
+      <h4 class="my-5 fix"><a href="/edit/<%=loca%>">Edit</a></h4>
+
+      <form action="/delete/<%=loca%>" method="post" class="my-5">
+        <input class="btn btn-danger fw-bolder" type="submit" value="Delete" />
+      </form>
+    </div>
+  </body>
+</html>

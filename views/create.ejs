@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+    <form action="/save" method="post" class="head">
+      <div class="move col-12 col-xxl-8 col-xl-8 p-5">
+        <input
+          class="form-control inputs"
+          type="text"
+          name="title"
+          placeholder="Title"
+        />
+        <textarea
+          class="form-control inputs"
+          id="content"
+          name="content"
+          rows="5"
+          cols="33"
+          placeholder="Type Content here"
+        ></textarea>
+        <input class="btn btn-light submit my-4" type="submit" value="SUBMIT" />
+      </div>
+    </form>
+  </body>
+</html>
